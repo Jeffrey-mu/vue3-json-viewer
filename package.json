@@ -1,6 +1,6 @@
 {
-  "name": "vue3-json-viewer",
-  "version": "2.2.1",
+  "name": "vue3-json-viewer-plus",
+  "version": "1.0.0",
   "description": "vuejs展示json的组件,适配vue3",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
@@ -24,7 +24,7 @@
   "bugs": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qiuquanwu/vue3-json-viewer"
+    "url": "git+https://github.com/Jeffrey-mu/vue3-json-viewer"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
@@ -64,6 +64,10 @@
     {
       "name": "邱权武",
       "email": "9194032@qq.com"
+    },
+    {
+      "name": "Jeffrey",
+      "email": "jeffrey.muc@gmail.com"
     }
   ],
   "dependencies": {

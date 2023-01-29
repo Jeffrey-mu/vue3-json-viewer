@@ -55,9 +55,9 @@ var script$a = {
             };
             if (islink) {
                 value = '<a href="'.concat(value, '" target="_blank" class="jv-link">').concat(value, '</a>');
-                domItem.innerHTML = '"'.concat(value.toString(), '"');
+                domItem.innerHTML = ''.concat(value.toString());
             } else {
-                domItem.innerText = '"'.concat(value.toString(), '"');
+                domItem.innerText = ''.concat(value.toString());
             }
         }
         return h('span', {}, [

@@ -1,6 +1,6 @@
 <script>
 // const REG_LINK = /^\w+:\/\//;
-const REG_LINK =/^([hH][tT]{2}[pP]:\/\/|[hH][tT]{2}[pP][sS]:\/\/)(([A-Za-z0-9-~]+)\.)+([A-Za-z0-9-~\/])+$/;
+const REG_LINK = /^([hH][tT]{2}[pP]:\/\/|[hH][tT]{2}[pP][sS]:\/\/)(([A-Za-z0-9-~]+)\.)+([A-Za-z0-9-~\/])+$/;
 import { h } from "vue";
 export default {
   name: 'JsonString',
@@ -26,7 +26,7 @@ export default {
       this.expand = !this.expand;
     }
   },
-  render () {
+  render() {
     let value = this.jsonValue;
     const islink = REG_LINK.test(value)
     let domItem
@@ -36,7 +36,7 @@ export default {
         class: {
           'jv-ellipsis': true,
         },
-        onClick:this.toggle,
+        onClick: this.toggle,
         innerText: '...'
       };
     } else {
@@ -49,12 +49,12 @@ export default {
       }
       if (islink) {
         value = `<a href="${value}" target="_blank" class="jv-link">${value}</a>`;
-        domItem.innerHTML=`"${value.toString()}"`
+        domItem.innerHTML = `${value.toString()}`
       } else {
-        domItem.innerText=`"${value.toString()}"`
+        domItem.innerText = `${value.toString()}`
       }
     }
-    
+
 
     return h('span', {}, [
       this.canExtend && h('span', {
@@ -62,7 +62,7 @@ export default {
           'jv-toggle': true,
           open: this.expand,
         },
-        onClick:this.toggle,
+        onClick: this.toggle,
       }),
       h('span', {
         class: {

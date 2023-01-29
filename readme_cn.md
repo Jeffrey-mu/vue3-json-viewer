@@ -1,4 +1,4 @@
-# vue3-json-viewer
+# vue3-json-viewer-plus
 
 简单易用的json内容展示组件,适配vue3和vite。
 在使用vue3+vite开发时，发现需要用到显示json数据组件，发现vue-json-viewer只能兼容vue2，于是花了一个小时，重写的vue3的适配。
@@ -12,16 +12,16 @@
 $ npm install clipboard --save
 ```
 
-再安装vue3-json-viewer
+再安装vue3-json-viewer-plus
 
 ```
-$ npm install vue3-json-viewer --save
+$ npm install vue3-json-viewer-plus --save
 ```
 ## 近期更新
 - 暗夜主题支持
 - 添加key节点点击事件
 - 支持正则表达式类型
-  
+
 ## 使用
 
 main.js
@@ -29,9 +29,9 @@ main.js
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
-import JsonViewer from "vue3-json-viewer"
-// if you used v1.0.5 or latster ,you should add import "vue3-json-viewer/dist/index.css"
-import "vue3-json-viewer/dist/index.css"
+import JsonViewer from "vue3-json-viewer-plus"
+// if you used v1.0.5 or latster ,you should add import "vue3-json-viewer-plus/dist/index.css"
+import "vue3-json-viewer-plus/dist/index.css"
 const app = createApp(App)
 //全局引入
 app.use(JsonViewer)
@@ -51,9 +51,9 @@ App.vue
 </template>
 
 <script setup>
-import {JsonViewer} from "vue3-json-viewer"
-// if you used v1.0.5 or latster ,you should add import "vue3-json-viewer/dist/index.css"
-import "vue3-json-viewer/dist/index.css";
+import {JsonViewer} from "vue3-json-viewer-plus"
+// if you used v1.0.5 or latster ,you should add import "vue3-json-viewer-plus/dist/index.css"
+import "vue3-json-viewer-plus/dist/index.css";
 import { reactive, ref } from "vue";
 let obj = {
   name: "qiu",//字符串
@@ -79,3 +79,6 @@ const keyClick = (keyName)=>{
 ```
 
 ![](./img/demo.png)
+
+## 说明 在此`vue3-json-viewer`基础修改部分
+- json-box展示字符串时去除前后引号
